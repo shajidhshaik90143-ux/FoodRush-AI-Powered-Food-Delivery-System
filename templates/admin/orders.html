@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h2>All Orders</h2>{% for o in orders %}<div class="card p-3 mb-2">#{{o.id}} — {{o.customer.name}} — {{o.restaurant.name}} — ₹{{o.total}} — {{o.status}}</div>{% endfor %}{% endblock %}

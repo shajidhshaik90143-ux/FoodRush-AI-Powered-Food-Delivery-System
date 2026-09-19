@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h2>Restaurants</h2>{% for r in restaurants %}<div class="card p-3 mb-2">{{r.name}} — {{r.cuisine}} — {{'Active' if r.is_active else 'Inactive'}}<form method="post" action="{{url_for('admin.toggle_restaurant',id=r.id)}}"><button class="btn btn-sm btn-warning">Toggle</button></form></div>{% endfor %}{% endblock %}
